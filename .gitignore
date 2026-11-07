@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.coverage.*
+.cache
+
+# Database & Local Storage
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# OS / Scratch artifacts
+*.log
+scratch/
+tmp/
+temp/
+
+# Large generated data (keep sample directory tracked, ignore huge bulk generation)
+data/generated/*
+!data/generated/.gitkeep
+outputs/large_*

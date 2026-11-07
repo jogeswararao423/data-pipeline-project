@@ -1,0 +1,8 @@
+metric,value
+total_raw_events,5933.0
+total_processed_events,2398.0
+total_rejected_records,3250.0
+total_orders_in_current_state,952.0
+total_daily_sales_net_amount,255737.31
+total_product_sales_net_amount,255737.31
+total_customer_sales_net_amount,255737.31

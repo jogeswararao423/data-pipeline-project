@@ -1,0 +1,8 @@
+metric,value
+total_raw_events,2.0
+total_processed_events,2.0
+total_rejected_records,0.0
+total_orders_in_current_state,1.0
+total_daily_sales_net_amount,0.0
+total_product_sales_net_amount,0.0
+total_customer_sales_net_amount,0.0

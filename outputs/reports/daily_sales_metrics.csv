@@ -1,0 +1,2 @@
+business_date,total_orders,completed_orders,cancelled_orders,gross_sales,net_sales,total_units_sold,distinct_customers,average_order_value,last_updated_at,run_id
+2026-01-03,1,0,0,299.98,0,0,0,0,2026-11-07 04:49:12,RUN-20261107-101912-214060
