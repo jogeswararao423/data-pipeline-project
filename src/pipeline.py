@@ -278,4 +278,11 @@ class PipelineOrchestrator:
             ]
             pd.DataFrame(recon_summary).to_csv(Config.REPORTS_DIR / "reconciliation_report.csv", index=False)
 
-        logger.info("Successfully exported all 6 deliverable CSV reports to outputs/reports/.")
+        # 7. Render Interactive HTML Dashboard
+        try:
+            from src.dashboard_generator import generate_html_dashboard
+            generate_html_dashboard(Config.REPORTS_DIR / "dashboard.html", engine=self.engine)
+        except Exception as dash_err:
+            logger.warning(f"Could not generate dashboard HTML: {dash_err}")
+
+        logger.info("Successfully exported all deliverable CSV reports and interactive dashboard to outputs/reports/.")

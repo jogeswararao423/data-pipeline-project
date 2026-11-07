@@ -165,6 +165,16 @@ def cmd_performance(args):
     run_benchmark(rows=args.rows)
 
 
+def cmd_dashboard(args):
+    """Generates the interactive HTML executive dashboard."""
+    from src.dashboard_generator import generate_html_dashboard
+    output_path = Config.REPORTS_DIR / "dashboard.html"
+    generate_html_dashboard(output_path)
+    print(f"\n=== INTERACTIVE DASHBOARD GENERATED ===")
+    print(f"Dashboard File: {output_path.resolve()}")
+    print("Double-click this file or open it in any web browser to view the visual charts!")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Daily E-Commerce Sales & Customer Metrics Pipeline CLI",
@@ -212,6 +222,9 @@ def main():
     p_perf = subparsers.add_parser("performance", help="Run performance benchmark")
     p_perf.add_argument("--rows", type=int, default=10000, help="Records to benchmark")
 
+    # dashboard
+    subparsers.add_parser("dashboard", help="Generate interactive HTML executive dashboard")
+
     args = parser.parse_args()
 
     commands = {
@@ -222,7 +235,8 @@ def main():
         "report": cmd_report,
         "reconcile": cmd_reconcile,
         "test": cmd_test,
-        "performance": cmd_performance
+        "performance": cmd_performance,
+        "dashboard": cmd_dashboard
     }
 
     cmd_fn = commands.get(args.command)

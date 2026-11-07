@@ -1,3 +1,15 @@
 run_id,pipeline_stage,status,source_file,records_read,records_valid,records_rejected,records_processed,records_inserted,records_updated,metrics_recomputed,error_type,error_message,duration_seconds,start_time,end_time
-RUN-20261107-101912-280E51,PIPELINE_TOTAL,SUCCESS,C:\Users\lokes\AppData\Local\Temp\pytest-of-lokes\pytest-4\test_reversal_reduces_net_sale0\sale.csv,1,1,0,1,1,0,1,,,0.096,2026-11-07 10:19:12,2026-11-07 10:19:12
-RUN-20261107-101912-214060,PIPELINE_TOTAL,STARTED,C:\Users\lokes\AppData\Local\Temp\pytest-of-lokes\pytest-4\test_reversal_reduces_net_sale0\reversal.csv,0,0,0,0,0,0,0,,,,2026-11-07 10:19:12,
+BACKFILL-E6F0B8ED,BACKFILL,SUCCESS,N/A,0,0,0,0,0,0,14,,,,2026-11-07 12:35:25,2026-11-07 12:35:25
+RUN-20261107-123517-836524,PIPELINE_TOTAL,PARTIAL_SUCCESS,data\sample\sample_transactions.csv,311,0,311,0,0,0,0,,,0.367,2026-11-07 12:35:17,2026-11-07 12:35:17
+RUN-20261107-101753-43812B,PIPELINE_TOTAL,SKIPPED_ALREADY_PROCESSED,data\sample\sample_transactions.csv,0,0,0,0,0,0,0,,,0.005,2026-11-07 10:17:53,2026-11-07 10:17:53
+BACKFILL-FE183415,BACKFILL,SUCCESS,N/A,0,0,0,0,0,0,7,,,,2026-11-07 10:12:22,2026-11-07 10:12:22
+RUN-20261107-101215-181C59,PIPELINE_TOTAL,SKIPPED_ALREADY_PROCESSED,data\sample\batch_2.csv,0,0,0,0,0,0,0,,,0.003,2026-11-07 10:12:15,2026-11-07 10:12:15
+RUN-20261107-101209-AE811F,PIPELINE_TOTAL,PARTIAL_SUCCESS,data\sample\batch_2.csv,631,72,559,72,60,0,14,,,0.608,2026-11-07 10:12:09,2026-11-07 10:12:10
+RUN-20261107-101054-F56E1D,PIPELINE_TOTAL,PARTIAL_SUCCESS,data\sample\fresh_batch_500.csv,631,0,631,0,0,0,0,,,0.277,2026-11-07 10:10:54,2026-11-07 10:10:54
+RUN-20261107-100635-5320D6,PIPELINE_TOTAL,PARTIAL_SUCCESS,data\sample\sample_transactions.csv,311,0,311,0,0,0,0,,,0.22,2026-11-07 10:06:35,2026-11-07 10:06:35
+RUN-20261107-100100-7B05AB,PIPELINE_TOTAL,SKIPPED_ALREADY_PROCESSED,ecommerce-data-pipeline\data\sample\sample_transactions.csv,0,0,0,0,0,0,0,,,0.034,2026-11-07 10:01:00,2026-11-07 10:01:00
+RUN-20261107-100052-B140AC,PIPELINE_TOTAL,PARTIAL_SUCCESS,ecommerce-data-pipeline\data\sample\sample_transactions.csv,311,285,26,285,225,0,7,,,1.478,2026-11-07 10:00:52,2026-11-07 10:00:53
+RUN-20261107-100041-6AF62D,PIPELINE_TOTAL,FAILED,ecommerce-data-pipeline\data\sample\sample_transactions.csv,0,0,0,0,0,0,0,UNHANDLED_EXCEPTION,"(sqlite3.IntegrityError) UNIQUE constraint failed: ingestion_file_registry.file_hash
+[SQL: INSERT INTO ingestion_file_registry (file_path, file_name, file_hash, row_count, file_size_bytes, status, run_id) VALUES (?, ?, ?, ?, ?, 'IN_PROGRESS', ?)]
+[parameters: ('C:\\Users\\lokes\\Downloads\\UploadFromMobile\\ecommerce-data-pipeline\\data\\sample\\sample_transactions.csv', 'sample_transactions.csv', 'aede5e97ed3cd36ecbf55222527976fc09dd4413834c253b013008b58de4ebbe', 311, 36237, 'RUN-20261107-100041-6AF62D')]
+(Background on this error at: https://sqlalche.me/e/21/gkpj)",0.057,2026-11-07 10:00:41,2026-11-07 10:00:41
